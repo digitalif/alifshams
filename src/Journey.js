@@ -1,15 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  FaHandshake,
-  FaUsers,
-  FaRocket,
-  FaLightbulb,
-  FaShieldAlt,
-  FaGlobe,
-  FaChartLine,
-  FaCogs,
-} from "react-icons/fa";
+
 import collabImage from "./assets/Collab.jpg";
 import partner from "../src/assets/Partner1.jpg";
 import { Link } from "react-router-dom";

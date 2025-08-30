@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 export const useScrollMemory = () => {
   const location = useLocation();
-  const scrollPositions = useRef(new Map());
+
   const isNavigating = useRef(false);
 
   useEffect(() => {

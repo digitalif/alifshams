@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SEOComponent from "./components/SEOComponent";
 import {
   Box,
   Typography,
@@ -268,6 +269,13 @@ const ContactUs = () => {
 
   return (
     <Box sx={{ minHeight: "100vh" }}>
+      <SEOComponent 
+        title="Contact AlifShams - Get in Touch for AI Consulting & Digital Marketing"
+        description="Contact AlifShams for expert AI consulting, digital marketing, and technology solutions. Located in Dubai, UAE. Get in touch for innovative business transformation services."
+        keywords="contact AlifShams, AI consulting Dubai, digital marketing Dubai, technology consulting UAE, business transformation, contact us, Dubai office"
+        url="https://digitalif.net/contact"
+        type="website"
+      />
       {/* Hero Section */}
       <Box
         sx={{

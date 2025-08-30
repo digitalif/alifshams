@@ -1,14 +1,23 @@
 import React from "react";
 import aiImage from "../../../assets/software.avif";
+import SEOComponent from "../../SEOComponent";
+import OptimizedImage from "../../OptimizedImage";
 import strategyImage from "../../../assets/AI-Consulting.webp";
 
 export default function AIStrategy() {
   return (
     <div className="bg-white">
+      <SEOComponent 
+        title="AI Strategy Development & Implementation Services | AlifShams"
+        description="Expert AI strategy development and implementation services. Create comprehensive AI roadmaps, assess capabilities, and drive measurable ROI with strategic AI integration."
+        keywords="AI strategy, AI implementation, AI roadmap, AI consulting, artificial intelligence strategy, AI transformation, AI business strategy, AI planning"
+        url="https://digitalif.net/solutions/AIConsulting/AIstrategy"
+        type="service"
+      />
       {/* Hero Section */}
       <section className="relative h-[800px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <OptimizedImage
             src={aiImage}
             alt="AI Consulting"
             className="w-full h-full object-cover"
@@ -32,7 +41,7 @@ export default function AIStrategy() {
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             {/* Image - Left Side */}
             <div className="flex-1">
-              <img
+              <OptimizedImage
                 src={strategyImage}
                 alt="AI Strategy Development"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"

@@ -1,5 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
+import SEOComponent from "./components/SEOComponent";
+import OptimizedImage from "./components/OptimizedImage";
 import {
   FaBullseye,
   FaRocket,
@@ -66,6 +68,13 @@ const About = () => {
 
   return (
     <div className="bg-gradient-to-br from-slate-900 via-gray-900 to-black text-white overflow-hidden">
+      <SEOComponent 
+        title="About AlifShams - Leading AI Consulting & Technology Solutions Company"
+        description="Learn about AlifShams, a leading technology solutions provider specializing in AI consulting, digital marketing, and business transformation. 200+ projects delivered with 99.99% client satisfaction."
+        keywords="about AlifShams, technology solutions provider, AI consulting company, business transformation, digital marketing agency, enterprise solutions, innovation company"
+        url="https://digitalif.net/about"
+        type="website"
+      />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -164,7 +173,7 @@ const About = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <img
+              <OptimizedImage
                 src={aboutImage}
                 alt="Who We Are"
                 className="w-full h-96 rounded-2xl shadow-2xl"
@@ -225,7 +234,7 @@ const About = () => {
 
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative order-2 lg:order-1" data-aos="fade-right">
-              <img
+              <OptimizedImage
                 src={apart}
                 alt="What sets us apart"
                 className="w-full h-96 object-cover rounded-2xl shadow-2xl"

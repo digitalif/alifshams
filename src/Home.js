@@ -1,99 +1,32 @@
-import React, { useEffect, useState, useRef } from "react";
-// import heroVideo from "./assets/hero_video.mp4";
+import React, { useRef } from "react";
 import heroVideo from "./assets/hero_video_main.mp4";
-import { motion, useScroll, useAnimation, useTransform } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import Glide from "@glidejs/glide";
-import "@glidejs/glide/dist/css/glide.core.min.css";
-import "@glidejs/glide/dist/css/glide.theme.min.css";
+import SEOComponent from "./components/SEOComponent";
+import OptimizedImage from "./components/OptimizedImage";
+import { motion } from "framer-motion";
 import Masonry from "@mui/lab/Masonry";
 import Paper from "@mui/material/Paper";
 import telcomImage from "../src/assets/telcom.jpg";
 import proptechImage from "../src/assets/Prop-tech.jpg";
-// import healthcare from "../src/assets/healthcare.avif";
 import banking from "../src/assets/banking1.avif";
 import software from "../src/assets/software.avif";
 import education from "../src/assets/education.avif";
 import { styled } from "@mui/material/styles";
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css";
-import industriesImage from "../src/assets/background4.jpg";
+
 import backgroundImage4 from "../src/assets/background2.jpg";
 import backgroundImage1 from "../src/assets/background4.jpg";
-import domainsImage from "../src/assets/Domains.jpg";
 import healthCare from "../src/assets/healthCare.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   EffectCoverflow,
   Autoplay,
   Navigation,
-  Pagination,
 } from "swiper/modules";
 import Carouselcomponent from "./carousel";
 import { Link } from "react-router-dom";
-const engagementPhases = [
-  { title: "1. Discover", description: "Assess needs, baseline KPIs" },
-  { title: "2. Design", description: "Co-create blueprints & use cases" },
-  { title: "3. Develop", description: "Agile prototyping & MVP builds" },
-  { title: "4. Deploy", description: "Launch & onboard systems" },
-  { title: "5. Enable", description: "Train users & embed governance" },
-  { title: "6. Evolve", description: "Continuously optimize" },
-];
 
-const slides = engagementPhases.map((phase, i) => (
-  <motion.div
-    key={i}
-    whileHover={{ scale: 1.05 }}
-    className="bg-white rounded-xl shadow-xl p-6 w-80 h-60 flex flex-col justify-center items-center text-center"
-  >
-    <h3 className="text-xl font-semibold text-blue-700 mb-2">{phase.title}</h3>
-    <p className="text-gray-600">{phase.description}</p>
-  </motion.div>
-));
-const carousel = (slider) => {
-  const z = 300;
-  function rotate() {
-    const deg = 360 * slider.track.details.progress;
-    slider.container.style.transform = `translateZ(-${z}px) rotateY(${-deg}deg)`;
-  }
-  slider.on("created", () => {
-    const deg = 360 / slider.slides.length;
-    slider.slides.forEach((element, idx) => {
-      element.style.transform = `rotateY(${deg * idx}deg) translateZ(${z}px)`;
-    });
-    rotate();
-  });
-  slider.on("detailsChanged", rotate);
-};
 
 export default function Home() {
-  const [sliderRef] = useKeenSlider(
-    {
-      loop: true,
-      selector: ".carousel__cell",
-      renderMode: "custom",
-      mode: "free-snap",
-    },
-    [carousel]
-  );
-
-  const sectionRef = useRef(null);
   const newsRef = useRef(null);
-  const industriesRef = useRef(null);
-  const glideRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: sectionRef,
-    offset: ["start center", "center start"],
-  });
-
-  const { scrollYProgress: newsScrollProgress } = useScroll({
-    target: newsRef,
-    offset: ["end end", "end start"],
-  });
-  const [activeIndex, setActiveIndex] = useState(0);
-  const leftX = useTransform(scrollYProgress, [0, 1], ["70px", "-50px"]);
-  const rightX = useTransform(scrollYProgress, [0, 1], ["-50px", "70px"]);
-  const translateY = useTransform(newsScrollProgress, [0, 0], ["0%", "0%"]);
   const industries = [
     {
       title: "Telecom",
@@ -277,23 +210,7 @@ export default function Home() {
         "We use data, creativity, and technology to power marketing that delivers measurable demand and brand equity.",
     },
   ];
-  const [sliderInstanceRef, slider] = useKeenSlider({
-    initial: 0,
-    loop: true,
-    slides: {
-      perView: 1,
-      spacing: 15,
-    },
-    slideChanged(s) {
-      // log when needed
-    },
-  });
 
-  const goToSlide = (index) => {
-    if (slider.current) {
-      slider.current.moveToSlideRelative(index);
-    }
-  };
 
   return (
     <div
@@ -306,6 +223,12 @@ export default function Home() {
         backgroundAttachment: "fixed",
       }}
     >
+      <SEOComponent 
+        title="AlifShams - AI Consulting, Digital Marketing & Technology Solutions"
+        description="Transform your business with expert AI consulting, digital marketing, and technology solutions in Dubai, UAE. Specializing in AI strategy, SEO, social media marketing, cloud solutions, and digital transformation."
+        keywords="AI consulting Dubai, digital marketing UAE, technology consulting Dubai, artificial intelligence UAE, SEO services Dubai, social media marketing UAE, cloud solutions Dubai, digital transformation UAE, business consulting Dubai, web development UAE"
+        url="https://digitalif.net"
+      />
       {/* Hero Section */}
       <div className="relative w-full h-[calc(100vh-73px)] mt-[73px]">
         <div className="absolute inset-0">
@@ -459,10 +382,9 @@ export default function Home() {
                       <div className="flip-inner w-full h-full">
                         {/* Front */}
                         <div className="flip-front w-full h-full">
-                          <img
+                          <OptimizedImage
                             src={item.img}
                             alt={item.title}
-                            loading="lazy"
                             className="w-full h-full object-cover rounded-xl"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-80 z-10" />

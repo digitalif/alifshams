@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import aiImage from "../../../assets/DigitalMarketing.jpg";
+import SEOComponent from "../../SEOComponent";
+import OptimizedImage from "../../OptimizedImage";
 import strategyImage from "../../../assets/Demand-Generation2.jpeg";
 import customImage from "../../../assets/SEO.jpg";
 import genaiImage from "../../../assets/SMM-2.jpg";
@@ -59,10 +61,17 @@ export default function DigitalMarketing() {
 
   return (
     <div className="bg-black">
+      <SEOComponent 
+        title="Digital Marketing Services - SEO, Social Media & Content Marketing | AlifShams"
+        description="Comprehensive digital marketing services in Dubai, UAE including SEO, social media marketing, demand generation, email marketing, video marketing, and influencer marketing. Drive measurable results with data-driven strategies."
+        keywords="digital marketing Dubai, SEO services UAE, social media marketing Dubai, demand generation UAE, email marketing Dubai, content marketing UAE, video marketing Dubai, influencer marketing UAE, digital advertising Dubai, online marketing UAE"
+        url="https://digitalif.net/solutions/digital-marketing"
+        type="service"
+      />
       {/* Hero Section */}
       <section className="relative h-[800px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <OptimizedImage
             src={aiImage}
             alt="Digital Marketing"
             className="w-full h-full object-cover"
@@ -125,7 +134,7 @@ export default function DigitalMarketing() {
             {/* Content - Right Side */}
             <div className="flex-1">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img
+                <OptimizedImage
                   src={services[activeService].image}
                   alt={services[activeService].title}
                   className="w-full h-48 object-cover"

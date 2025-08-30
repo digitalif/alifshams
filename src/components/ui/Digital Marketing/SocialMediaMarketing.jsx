@@ -1,14 +1,23 @@
 import React from "react";
 import aiImage from "../../../assets/SMM1.jpg";
+import SEOComponent from "../../SEOComponent";
+import OptimizedImage from "../../OptimizedImage";
 import strategyImage from "../../../assets/SMM-2.jpg";
 
 export default function SocialMediaMarketing() {
   return (
     <div className="bg-white">
+      <SEOComponent 
+        title="Social Media Marketing Services - SMM & Social Advertising | AlifShams"
+        description="Professional social media marketing services including content strategy, targeted advertising, and social media management across all platforms. Build brand awareness and engagement."
+        keywords="social media marketing, SMM, social media advertising, social media management, Facebook marketing, Instagram marketing, LinkedIn marketing, social media strategy"
+        url="https://digitalif.net/solutions/digital-marketing/smm"
+        type="service"
+      />
       {/* Hero Section */}
       <section className="relative h-[800px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <OptimizedImage
             src={aiImage}
             alt="Social Media Marketing (SMM)"
             className="w-full h-full object-cover"
@@ -32,7 +41,7 @@ export default function SocialMediaMarketing() {
           <div className="flex flex-col lg:flex-row gap-12 items-center">
             {/* Image - Left Side */}
             <div className="flex-1">
-              <img
+              <OptimizedImage
                 src={strategyImage}
                 alt="Social Media Marketing"
                 className="w-full h-96 object-cover rounded-lg shadow-lg"

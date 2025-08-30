@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import aiImage from "../../../assets/AIConsulting.jpeg";
+import SEOComponent from "../../SEOComponent";
+import OptimizedImage from "../../OptimizedImage";
 import strategyImage from "../../../assets/AI-Consulting.webp";
 import customImage from "../../../assets/customAIDevelopment.avif";
 import genaiImage from "../../../assets/GEN AI.jpg";
@@ -59,10 +61,17 @@ export default function AIConsulting() {
 
   return (
     <div className="bg-black">
+      <SEOComponent 
+        title="AI Consulting Services - Custom AI Development & Strategy | AlifShams"
+        description="Expert AI consulting services in Dubai, UAE including AI strategy, custom AI development, generative AI, agentic AI, and ethical AI compliance. Transform your business with cutting-edge artificial intelligence solutions."
+        keywords="AI consulting Dubai, artificial intelligence consulting UAE, AI strategy Dubai, custom AI development UAE, generative AI Dubai, agentic AI UAE, ethical AI Dubai, machine learning UAE, AI implementation Dubai, AI transformation UAE"
+        url="https://digitalif.net/solutions/AIConsulting"
+        type="service"
+      />
       {/* Hero Section */}
       <section className="relative h-[800px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <OptimizedImage
             src={aiImage}
             alt="AI Consulting"
             className="w-full h-full object-cover"
@@ -126,7 +135,7 @@ export default function AIConsulting() {
             {/* Content - Right Side */}
             <div className="flex-1">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img
+                <OptimizedImage
                   src={services[activeService].image}
                   alt={services[activeService].title}
                   className="w-full h-48 object-cover"

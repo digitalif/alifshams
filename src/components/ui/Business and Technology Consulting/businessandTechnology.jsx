@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import aiImage from "../../../assets/Business.jpg";
+import SEOComponent from "../../SEOComponent";
+import OptimizedImage from "../../OptimizedImage";
 import strategyImage from "../../../assets/MS.png";
 import customImage from "../../../assets/webdesign.jpg";
 import genaiImage from "../../../assets/cloudSolutions1.webp";
@@ -59,10 +61,17 @@ export default function BusinessTechnology() {
 
   return (
     <div className="bg-black">
+      <SEOComponent 
+        title="Business & Technology Consulting - Microsoft, Cloud & Cybersecurity | AlifShams"
+        description="Expert business and technology consulting services including Microsoft solutions, cloud migration, cybersecurity, digital transformation, and governance. Optimize your digital backbone for growth."
+        keywords="business consulting, technology consulting, Microsoft services, cloud solutions, cybersecurity, digital transformation, governance risk compliance, Azure, Microsoft 365, web development"
+        url="https://digitalif.net/solutions/business-technology"
+        type="service"
+      />
       {/* Hero Section */}
       <section className="relative h-[800px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <OptimizedImage
             src={aiImage}
             alt="Business and Technology Consulting"
             className="w-full h-full object-cover"
@@ -125,7 +134,7 @@ export default function BusinessTechnology() {
             {/* Content - Right Side */}
             <div className="flex-1">
               <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                <img
+                <OptimizedImage
                   src={services[activeService].image}
                   alt={services[activeService].title}
                   className="w-full h-48 object-cover"

@@ -1,10 +1,7 @@
 import React, { useRef, useState } from "react";
-import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { motion, useScroll, useAnimation, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
-// import backgroundImage1 from "../src/assets/industries1.png";
-import backgroundImage1 from "../src/assets/background4.jpg";
 const carouselData = [
   {
     id: "Discover",
@@ -94,7 +91,6 @@ export default function CarouselSliderTailwind() {
   });
   const leftX = useTransform(scrollYProgress, [0, 1], ["70px", "-50px"]);
   const rightX = useTransform(scrollYProgress, [0, 1], ["-50px", "70px"]);
-  // const translateY = useTransform(newsScrollProgress, [0, 0], ["0%", "0%"]);
   return (
     <section
       className="w-full py-10 "
