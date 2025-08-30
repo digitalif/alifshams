@@ -274,7 +274,7 @@ function Navbar() {
     <>
       {/* Original Navbar (fixed at top) */}
       {lastScrollY <= 10 && (
-        <nav className="fixed top-0 left-0 w-full bg-[#482A7A]/80 backdrop-blur-md shadow-xl z-40 border-b border-white/10">
+        <nav className="fixed top-0 left-0 w-full bg-black backdrop-blur-md shadow-xl z-40 border-b border-white/10">
           <NavbarContent />
         </nav>
       )}

@@ -34,6 +34,19 @@
     -moz-osx-font-smoothing: grayscale;
   }
 }
+@font-face {
+  font-family: 'CorpticDemo';
+  src: url('../src/assets/fonts/Corptic\ DEMO.otf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CorpticDemo';
+  src: url('../src/assets/fonts/Corptic\ DEMO.otf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
 
 body {
   margin: 0px;

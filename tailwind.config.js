@@ -11,6 +11,7 @@ module.exports = {
         sans: ["Montserrat", "system-ui", "sans-serif"],
         heading: ["Montserrat", "system-ui", "sans-serif"],
         body: ["Montserrat", "system-ui", "sans-serif"],
+        tech: ["CorpticDemo"],
       },
     },
   },

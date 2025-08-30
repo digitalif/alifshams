@@ -1,6 +1,6 @@
 import React from "react";
-import aiImage from "../../../assets/Demand-Generation.jpeg";
-import strategyImage from "../../../assets/Demand-Generation1.jpeg";
+import aiImage from "../../../assets/Demand-Generation1.jpeg";
+import strategyImage from "../../../assets/Demand-Generation2.jpeg";
 
 export default function DemandGeneration() {
   return (

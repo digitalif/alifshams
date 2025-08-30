@@ -1,6 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaInstagram,
+} from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -12,19 +17,32 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold mb-4">ALIFSHAMS</h3>
             <p className="text-gray-300 mb-4">
-              Transforming ideas into reality through innovation and excellence in technology solutions.
+              Transforming ideas into reality through innovation and excellence
+              in technology solutions.
             </p>
             <div className="flex space-x-4">
-              <a href="https://facebook.com" className="hover:text-[#B31F7E] transition-colors">
+              <a
+                href="https://facebook.com"
+                className="hover:text-[#B31F7E] transition-colors"
+              >
                 <FaFacebookF size={20} />
               </a>
-              <a href="https://twitter.com" className="hover:text-[#B31F7E] transition-colors">
+              <a
+                href="https://twitter.com"
+                className="hover:text-[#B31F7E] transition-colors"
+              >
                 <FaTwitter size={20} />
               </a>
-              <a href="https://linkedin.com" className="hover:text-[#B31F7E] transition-colors">
+              <a
+                href="https://linkedin.com"
+                className="hover:text-[#B31F7E] transition-colors"
+              >
                 <FaLinkedinIn size={20} />
               </a>
-              <a href="https://instagram.com" className="hover:text-[#B31F7E] transition-colors">
+              <a
+                href="https://instagram.com"
+                className="hover:text-[#B31F7E] transition-colors"
+              >
                 <FaInstagram size={20} />
               </a>
             </div>
@@ -35,22 +53,34 @@ const Footer = () => {
             <h4 className="text-xl font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-gray-300 hover:text-[#B31F7E] transition-colors">
+                <Link
+                  to="/"
+                  className="text-gray-300 hover:text-[#B31F7E] transition-colors"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/solutions" className="text-gray-300 hover:text-[#B31F7E] transition-colors">
+                <Link
+                  to="/solutions"
+                  className="text-gray-300 hover:text-[#B31F7E] transition-colors"
+                >
                   Solutions
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-gray-300 hover:text-[#B31F7E] transition-colors">
+                <Link
+                  to="/about"
+                  className="text-gray-300 hover:text-[#B31F7E] transition-colors"
+                >
                   About Us
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-300 hover:text-[#B31F7E] transition-colors">
+                <Link
+                  to="/contact"
+                  className="text-gray-300 hover:text-[#B31F7E] transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -61,9 +91,22 @@ const Footer = () => {
           <div>
             <h4 className="text-xl font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2">
-              <li className="text-gray-300">AI Consulting</li>
-              <li className="text-gray-300">Business and Technology Consulting</li>
-              <li className="text-gray-300">Digital Marketing</li>
+              <Link to="/solutions/AIConsulting">
+                <li className="text-gray-300 hover:text-[#B31F7E] transition-colors mb-4">
+                  AI Consulting
+                </li>
+              </Link>
+              <Link to="/solutions/business-technology">
+                <li className="text-gray-300 hover:text-[#B31F7E] transition-colors mb-4">
+                  Business & Technology
+                  <br /> Consulting
+                </li>
+              </Link>
+              <Link to="/solutions/digital-marketing">
+                <li className="text-gray-300 hover:text-[#B31F7E] transition-colors">
+                  Digital Marketing
+                </li>
+              </Link>
               {/* <li className="text-gray-300">Cybersecurity</li>
               <li className="text-gray-300">IoT Solutions</li> */}
             </ul>
@@ -77,15 +120,11 @@ const Footer = () => {
                 Office #603
                 <br />
                 Golden Business Center
-                <br/>
+                <br />
                 Port Saeed, Deira, Dubai.
               </p>
-              <p className="text-gray-300">
-                Phone: +1 (555) 123-4567
-              </p>
-              <p className="text-gray-300">
-                Email: digitalifshams@outlook.com
-              </p>
+              <p className="text-gray-300">Phone: +971-555-763-441</p>
+              <p className="text-gray-300">Email: info@digitalif.net</p>
             </div>
           </div>
         </div>
@@ -97,10 +136,16 @@ const Footer = () => {
               © {new Date().getFullYear()} ALIF. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/privacy" className="text-gray-300 text-sm hover:text-[#B31F7E] transition-colors">
+              <Link
+                to="/privacy"
+                className="text-gray-300 text-sm hover:text-[#B31F7E] transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-gray-300 text-sm hover:text-[#B31F7E] transition-colors">
+              <Link
+                to="/terms"
+                className="text-gray-300 text-sm hover:text-[#B31F7E] transition-colors"
+              >
                 Terms of Service
               </Link>
             </div>
@@ -111,4 +156,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default Footer;

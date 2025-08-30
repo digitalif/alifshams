@@ -82,16 +82,13 @@ const ContactUs = () => {
       const isClient = formData.userType === "client";
       const isJobSeeker = formData.userType === "jobSeeker";
       if (isClient) {
-        response = await axios.post(
-          "/user/mail",
-          formData
-        );
+        response = await axios.post("/user/mail", formData);
       } else if (isJobSeeker) {
         response = await axios.post("/user/contactus", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
       }
-      console.log(response)
+      console.log(response);
       toast.success("Form submitted successfully!", { autoClose: 3000 });
       setFormData({
         userType: "",
@@ -305,7 +302,7 @@ const ContactUs = () => {
             left: 0,
             width: "100%",
             height: "100%",
-            bgcolor: "rgba(0,0,0,0.5)",
+            bgcolor: "rgba(0,0,0,0.2)",
             zIndex: -1,
           }}
         />
@@ -354,7 +351,7 @@ const ContactUs = () => {
                     Email
                   </Typography>
                   <Typography variant="body2" sx={{ color: "grey.300" }}>
-                    contact@alifshams.com
+                    info@digitalif.net
                   </Typography>
                 </Box>
               </Box>
@@ -371,7 +368,13 @@ const ContactUs = () => {
                     Headquarters
                   </Typography>
                   <Typography variant="body2" sx={{ color: "grey.300" }}>
-                    Innovation Hub, Tech City, Hyderabad, Telangana - 500001
+                    <p className="text-gray-300">
+                      Office #603
+                      <br />
+                      Golden Business Center
+                      <br />
+                      Port Saeed, Deira, Dubai.
+                    </p>
                   </Typography>
                 </Box>
               </Box>
@@ -518,7 +521,7 @@ const ContactUs = () => {
         <Paper sx={{ height: "400px", borderRadius: 2, overflow: "hidden" }}>
           <iframe
             title="Google Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.8368324924766!2d78.4411097!3d17.4004712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb971466381c91%3A0xc855906f2903c236!2sMasab%20Tank%2C%20Hyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1702599999999!5m2!1sen!2sin"
+            src="https://maps.google.com/maps?q=25.25786514656081,55.33348515196447&z=15&output=embed"
             style={{
               width: "100%",
               height: "100%",

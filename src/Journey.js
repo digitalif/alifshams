@@ -12,6 +12,7 @@ import {
 } from "react-icons/fa";
 import collabImage from "./assets/Collab.jpg";
 import partner from "../src/assets/Partner1.jpg";
+import { Link } from "react-router-dom";
 const Journey = () => {
   const whyUsPoints = [
     "Proven track record with 500+ successful AI implementations",
@@ -31,12 +32,12 @@ const Journey = () => {
         "Schedule a discovery call to understand your needs and objectives",
     },
     {
-      step: "2. Whitelist Application",
+      step: "2. Executive Alignment",
       description:
-        "Submit your project details for our technical review and approval process",
+        "Turning leadership consensus into organizational momentum",
     },
     {
-      step: "3. Startup Onboarding",
+      step: "3. Initiate Onboarding",
       description:
         "Complete onboarding with dedicated account management and project setup",
     },
@@ -86,8 +87,12 @@ const Journey = () => {
           <div className="flex items-stretch mb-12" data-aos="fade-right">
             <div className="w-1/2 bg-gradient-to-br from-blue-900/30 to-blue-800/30 p-12 flex flex-col justify-center border-r-4 border-blue-500">
               <div className="mb-6">
-                <span className="text-blue-400 text-sm font-semibold tracking-wider uppercase">Excellence</span>
-                <h2 className="text-4xl font-bold text-white mt-2">Why Choose ALIF?</h2>
+                <span className="text-blue-400 text-sm font-semibold tracking-wider uppercase">
+                  Excellence
+                </span>
+                <h2 className="text-4xl font-bold text-white mt-2">
+                  Why Choose ALIF?
+                </h2>
               </div>
               <div className="space-y-4">
                 {whyUsPoints.map((point, index) => (
@@ -99,7 +104,11 @@ const Journey = () => {
               </div>
             </div>
             <div className="w-1/2 relative overflow-hidden">
-              <img src={collabImage} alt="Collaboration" className="w-full h-full object-cover" />
+              <img
+                src={collabImage}
+                alt="Collaboration"
+                className="w-full h-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent to-black/50"></div>
             </div>
           </div>
@@ -109,21 +118,30 @@ const Journey = () => {
       {/* How to Collaborate Section - Timeline Layout */}
       <div className="py-20 bg-gradient-to-b from-blue-900/20 to-black/20">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-white" data-aos="fade-up">
+          <h2
+            className="text-4xl font-bold text-center mb-16 text-white"
+            data-aos="fade-up"
+          >
             How to Collaborate with Us
           </h2>
-          
+
           <div className="relative">
             {/* Vertical Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-blue-400 h-full"></div>
 
             {collaborationSteps.map((item, index) => (
-              <div key={index} className="flex items-center mb-16" data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}>
+              <div
+                key={index}
+                className="flex items-center mb-16"
+                data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+              >
                 {index % 2 === 0 ? (
                   <>
                     <div className="w-1/2 pr-8">
                       <div className="bg-gradient-to-r from-blue-800/50 to-slate-800/50 p-6 rounded-xl border-l-4 border-blue-400">
-                        <h3 className="text-xl font-bold mb-3 text-blue-300">{item.step}</h3>
+                        <h3 className="text-xl font-bold mb-3 text-blue-300">
+                          {item.step}
+                        </h3>
                         <p className="text-gray-200">{item.description}</p>
                       </div>
                     </div>
@@ -136,7 +154,9 @@ const Journey = () => {
                     <div className="w-8 h-8 bg-blue-400 rounded-full border-4 border-slate-900 z-10"></div>
                     <div className="w-1/2 pl-8">
                       <div className="bg-gradient-to-r from-slate-800/50 to-blue-800/50 p-6 rounded-xl border-r-4 border-blue-400">
-                        <h3 className="text-xl font-bold mb-3 text-blue-300">{item.step}</h3>
+                        <h3 className="text-xl font-bold mb-3 text-blue-300">
+                          {item.step}
+                        </h3>
                         <p className="text-gray-200">{item.description}</p>
                       </div>
                     </div>
@@ -159,12 +179,11 @@ const Journey = () => {
             transformation journey today.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-white text-[#B31F7E] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-              Apply for Whitelist
-            </button>
-            <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-[#B31F7E] transition-colors">
-              Schedule Consultation
-            </button>
+            <Link to="/contact">
+              <button className="bg-white text-[#B31F7E] px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Schedule Consultation
+              </button>
+            </Link>
           </div>
         </div>
       </div>

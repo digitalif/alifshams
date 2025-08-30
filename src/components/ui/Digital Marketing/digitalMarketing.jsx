@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import aiImage from "../../../assets/DigitalMarketing.jpg";
-import strategyImage from "../../../assets/Demand-Generation.jpeg";
+import strategyImage from "../../../assets/Demand-Generation2.jpeg";
 import customImage from "../../../assets/SEO.jpg";
 import genaiImage from "../../../assets/SMM-2.jpg";
 import agenticImage from "../../../assets/EMAIL1.jpg";

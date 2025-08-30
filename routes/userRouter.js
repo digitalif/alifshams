@@ -42,7 +42,7 @@ router.post("/mail", async (req, res) => {
   } = req.body;
   const mailOptions = {
     from: "testbasesamctg@gmail.com",
-    to: "shaikriyaz222@gmail.com",
+    to: "info@digitalif.net",
     subject: `Client: ${name} wants to get in touch with you!!`,
     html: `
       <html>
@@ -129,7 +129,7 @@ router.post(
     const coverLetter = req.body.coverLetter || "NA";
     let mailOptions = {
       from: "testbasesamctg@gmail.com",
-      to: "shaikriyaz222@gmail.com",
+      to: "info@digitalif.net",
       subject: `Job Seeker: ${name} wants to join your team!`,
       html: `
         <html>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
-import heroVideo from "./assets/hero_video.mp4";
+// import heroVideo from "./assets/hero_video.mp4";
+import heroVideo from "./assets/hero_video_main.mp4";
 import { motion, useScroll, useAnimation, useTransform } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Glide from "@glidejs/glide";
@@ -98,8 +99,17 @@ export default function Home() {
       title: "Telecom",
       icon: "📡",
       img: telcomImage,
-      description:
-        "Deploy customer churn prediction, AI for call routing, fraud detection, network optimization, and predictive maintenance for telecom giants.",
+      description: (
+        <>
+          From <u>5G deployment strategies to AI-powered customer analytics</u>,
+          our consulting approach ensures operators achieve both operational
+          efficiency and digital growth.
+          <br />
+          We <u>align business models with evolving market dynamics</u>,
+          enabling telecom firms to move beyond connectivity and deliver
+          value-added digital services.
+        </>
+      ),
       to: "/telecom",
       color: "blue",
     },
@@ -107,8 +117,21 @@ export default function Home() {
       title: "Healthcare",
       icon: "🏥",
       img: healthCare,
-      description:
-        "Support health systems, hospitals, and startups with AI-driven diagnostics, virtual health platforms, operational analytics, and secure data governance models.",
+      description: (
+        <>
+          <u>Focusing on enabling healthcare-centric digital transformation</u>,
+          we help hospitals, payers, and life sciences companies harness
+          technologies such as AI, IoT, and cloud to improve care outcomes,
+          streamline operations, and ensure compliance.
+          <br />
+          From telemedicine platforms to predictive healthcare analytics, we{" "}
+          <u>
+            drive strategies that blend clinical excellence with operational
+            efficiency
+          </u>
+          .
+        </>
+      ),
       to: "/healthcare",
       color: "green",
     },
@@ -116,8 +139,16 @@ export default function Home() {
       title: "Banking & Finance",
       icon: "🏦",
       img: banking,
-      description:
-        "Partner with banks and fintechs to deliver robo-advisory systems, fraud detection, credit risk scoring, and AI-driven personal finance platforms.",
+      description: (
+        <>
+          From digital banking transformation to AI-powered risk modeling, our
+          consulting services address both <u> growth and governance </u>.<br />
+          With fintech innovation and regulatory compliance shaping the future,
+          we help BFSI organizations build{" "}
+          <u> agile, scalable, and future-ready operating models </u> that
+          balance profitability with trust and transparency.
+        </>
+      ),
       to: "/banking",
       color: "purple",
     },
@@ -125,8 +156,23 @@ export default function Home() {
       title: "IT & Software",
       icon: "💻",
       img: software,
-      description:
-        "Assist product companies and service providers in embedding AI into software delivery, DevOps, product lifecycle, and customer support using cloud-native and AI-first tooling.",
+      description: (
+        <>
+          <div className="mb-2">
+            With <u>speed, scalability, and innovation</u> as non-negotiable, we
+            help IT and software enterprises reimagine product strategies,
+            optimize delivery models, and harness next-generation technologies.
+          </div>
+          Our consulting expertise spans cloud adoption, DevOps transformation,
+          platform engineering, and AI integration - ensuring{" "}
+          <u>faster time-to-market and sustained competitiveness</u>
+          <br />
+          <br />
+          We enable IT leaders to not just solve today’s challenges but also
+          <u> anticipate tomorrow’s opportunities</u> in an evolving digital
+          ecosystem.
+        </>
+      ),
       to: "/it-software",
       color: "pink",
     },
@@ -134,8 +180,17 @@ export default function Home() {
       title: "Education",
       icon: "🎓",
       img: education,
-      description:
-        "Co-create AI-enabled learning platforms, adaptive assessments, digital classrooms, and tools for remote education delivery with robust data insights.",
+      description: (
+        <>
+          We partner with academic institutions, EdTech firms, and training
+          providers to <u> reimagine education for the digital-first era </u>.{" "}
+          <br /> From deploying AI-powered learning platforms to creating smart
+          campus ecosystems, we enable{" "}
+          <u>immersive, personalized, and scalable learning experiences.</u> Our
+          consulting approach helps education providers{" "}
+          <u> blend pedagogy with technology</u>.
+        </>
+      ),
       to: "/education",
       color: "yellow",
     },
@@ -143,8 +198,24 @@ export default function Home() {
       title: "PropTech",
       icon: "🏢",
       img: proptechImage, // make sure you have an appropriate image imported as `proptechImage`
-      description:
-        "Leverage AI for property valuation, smart tenant analytics, predictive maintenance, digital leasing, and real-time market intelligence to transform real estate operations.",
+      description: (
+        <>
+          We empower real estate and urban development players to
+          <u> capitalize on PropTech innovations</u>. From smart city planning
+          to digital twin adoption, we help orgs redefine how spaces are
+          designed, built, and managed.
+          <br />
+          Our consulting focus includes{" "}
+          <u>
+            IoT-enabled asset management, AI-driven market insights, and
+            sustainable urban strategies.
+          </u>
+          <br />
+          We enable stakeholders - developers, investors, and city planners - to
+          unlock efficiency, transparency, and{" "}
+          <u>value creation across the property lifecycle.</u>
+        </>
+      ),
       to: "/proptech",
       color: "emerald", // or choose another Tailwind color like teal, indigo, etc.
     },
@@ -250,21 +321,32 @@ export default function Home() {
           </video>
         </div>
         <div className="relative z-10 flex h-full flex-col items-center justify-center bg-black/60 px-8 text-center">
-          <h1 data-aos="fade-right" className="mb-4 font-sans text-5xl font-extrabold text-white md:text-6xl lg:text-7xl">
-            Welcome to <span className="text-white">ALIF</span>
+          <h1
+            data-aos="fade-right"
+            className="mb-4 font-sans text-5xl font-extrabold text-white md:text-6xl lg:text-7xl"
+          >
+            <span className="text-[200px] font-serif text-6xl tracking-wide animate-pulse">
+              <span className="text-white">
+                A<span className="text-[#994AF9]">L</span>I
+                <span className="text-[#994AF9]">F</span>
+              </span>
+            </span>
           </h1>
-          <p data-aos="fade-left" className="mx-auto max-w-3xl text-lg text-white md:text-xl lg:text-2xl">
+          <p
+            data-aos="fade-left"
+            className="mx-auto max-w-3xl text-lg text-white md:text-xl lg:text-2xl"
+          >
             Transforming ideas into reality through innovation and excellence
           </p>
-          <Link to="/solutions/AIConsulting/AIstrategy">
+          {/* <Link to="/solutions/AIConsulting/AIstrategy">
             <button className="mt-8 px-8 py-3 bg-[#B31F7E] text-white font-medium rounded-xl hover:bg-[#482A7A] transition-colors">
               Discover More
             </button>
-          </Link>
+          </Link> */}
         </div>
       </div>
       <div>
-        <div >
+        <div>
           <Carouselcomponent />
         </div>
 
@@ -280,7 +362,7 @@ export default function Home() {
             }}
           >
             <div data-aos="fade-up" className="container mx-auto px-4 py-10 ">
-              <h2  className="text-4xl text-[#B31F7E] font-bold text-center mb-4">
+              <h2 className="text-4xl text-[#B31F7E] font-bold text-center mb-4">
                 Our Domains
               </h2>
               <div className="w-24 h-1 bg-white mx-auto"></div>
@@ -348,7 +430,10 @@ export default function Home() {
               backgroundRepeat: "repeat",
             }}
           >
-            <motion.section data-aos="fade-up" className="py-10 px-20 text-white w-full z-20 relative">
+            <motion.section
+              data-aos="fade-up"
+              className="py-10 px-20 text-white w-full z-20 relative"
+            >
               <h2 className="text-4xl font-bold text-center mb-4 text-[#B31F7E]">
                 Industries
               </h2>
