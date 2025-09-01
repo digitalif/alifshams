@@ -35,6 +35,7 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "react-snap": "^1.23.0",
     "tailwindcss": "^3.4.17"
   },
   "scripts": {
@@ -42,7 +43,7 @@
     "local": "npm run build && node server.js",
     "internal": "react-scripts start",
     "vercel-preinstall": "npm install --legacy-peer-deps",
-    "build": "react-scripts build",
+    "build": "react-scripts build && react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -63,5 +64,19 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "reactSnap": {
+    "include": [
+      "/",
+      "/about",
+      "/contact",
+      "/solutions",
+      "/solutions/AIConsulting",
+      "/solutions/digital-marketing",
+      "/solutions/business-technology"
+    ],
+    "skipThirdPartyRequests": true,
+    "cacheAjaxRequests": false,
+    "preloadImages": false
   }
 }

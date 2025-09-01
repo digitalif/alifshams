@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "./assets/file.svg";
+import logo from "./assets/Main_Logo1.png";
+import logo1 from "./assets/Main_Logo1-bg-remove.png";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -151,12 +152,12 @@ function Navbar() {
     };
   }, [lastScrollY]);
 
-  const NavbarContent = () => (
+  const NavbarContent = ({ useScrollingLogo = false }) => (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex justify-between items-center h-[85px]">
         {/* Logo */}
         <div className="flex-shrink-0 flex items-center">
-          <img src={logo} className="h-20 rounded-lg" alt="Logo" />
+          <img src={useScrollingLogo ? logo1 : logo} className="h-20 rounded-lg" alt="Logo" />
         </div>
 
         {/* Desktop Menu */}
@@ -281,13 +282,13 @@ function Navbar() {
 
       {/* Scrolling Navbar */}
       <nav
-        className={`fixed top-0 left-0 w-full bg-gradient-to-r from-purple-600 to-[#B31F7E] backdrop-blur-md shadow-xl z-50 border-b border-white/10 transform transition-all duration-500 ease-in-out ${
+        className={`fixed top-0 left-0 w-full bg-gradient-to-r from-[#B31F7E]  to-purple-600 backdrop-blur-md shadow-xl z-50 border-b border-white/10 transform transition-all duration-500 ease-in-out ${
           isVisible
             ? "translate-y-0 opacity-100"
             : "-translate-y-full opacity-0"
         }`}
       >
-        <NavbarContent />
+        <NavbarContent useScrollingLogo={true} />
       </nav>
 
       {/* Mobile Menu */}

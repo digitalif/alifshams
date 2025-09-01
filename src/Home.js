@@ -16,14 +16,9 @@ import backgroundImage4 from "../src/assets/background2.jpg";
 import backgroundImage1 from "../src/assets/background4.jpg";
 import healthCare from "../src/assets/healthCare.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  EffectCoverflow,
-  Autoplay,
-  Navigation,
-} from "swiper/modules";
+import { EffectCoverflow, Autoplay, Navigation } from "swiper/modules";
 import Carouselcomponent from "./carousel";
 import { Link } from "react-router-dom";
-
 
 export default function Home() {
   const newsRef = useRef(null);
@@ -211,7 +206,6 @@ export default function Home() {
     },
   ];
 
-
   return (
     <div
       className="min-h-screen"
@@ -223,10 +217,11 @@ export default function Home() {
         backgroundAttachment: "fixed",
       }}
     >
-      <SEOComponent 
+      <SEOComponent
         title="AlifShams - AI Consulting, Digital Marketing & Technology Solutions"
         description="Transform your business with expert AI consulting, digital marketing, and technology solutions in Dubai, UAE. Specializing in AI strategy, SEO, social media marketing, cloud solutions, and digital transformation."
-        keywords="AI consulting Dubai, digital marketing UAE, technology consulting Dubai, artificial intelligence UAE, SEO services Dubai, social media marketing UAE, cloud solutions Dubai, digital transformation UAE, business consulting Dubai, web development UAE"
+        keywords="AI consulting Dubai, digital marketing UAE, technology consulting Dubai, artificial intelligence UAE, SEO services Dubai, social media marketing UAE, cloud solutions Dubai, digital transformation UAE, business consulting Dubai, web development UAE,
+        PropTech consulting, healthcare digital solutions, telecom business strategy"
         url="https://digitalif.net"
       />
       {/* Hero Section */}
@@ -238,6 +233,8 @@ export default function Home() {
             loop
             muted
             playsInline
+            preload="metadata"
+            controls={false}
           >
             <source src={heroVideo} type="video/mp4" />
             Your browser does not support the video tag.
