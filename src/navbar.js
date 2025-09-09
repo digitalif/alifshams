@@ -104,28 +104,28 @@ function Navbar() {
         },
       ],
     },
-    {
-      to: "#",
-      label: "Case Studies",
-      submenu: [
-        {
-          to: "/solutions/casestudies/redingtongulf",
-          label: "Redington- Gulf",
-        },
-        {
-          to: "/solutions/casestudies/microsoft",
-          label: "Microsoft UAE - D365 Campaign",
-        },
-        {
-          to: "/solutions/casestudies/microsoftksa",
-          label: "Microsoft KSA",
-        },
-        {
-          to: "/solutions/casestudies/qatar",
-          label: "Mannai- ǫatar",
-        },
-      ],
-    },
+    // {
+    //   to: "#",
+    //   label: "Case Studies",
+    //   submenu: [
+    //     {
+    //       to: "/solutions/casestudies/redingtongulf",
+    //       label: "Redington- Gulf",
+    //     },
+    //     {
+    //       to: "/solutions/casestudies/microsoft",
+    //       label: "Microsoft UAE - D365 Campaign",
+    //     },
+    //     {
+    //       to: "/solutions/casestudies/microsoftksa",
+    //       label: "Microsoft KSA",
+    //     },
+    //     {
+    //       to: "/solutions/casestudies/qatar",
+    //       label: "Mannai- ǫatar",
+    //     },
+    //   ],
+    // },
   ];
 
   const isActive = (path) => location.pathname === path;

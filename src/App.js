@@ -34,10 +34,10 @@ import VideoMarketing from "./components/ui/Digital Marketing/VideoMarketing";
 import InfluencerMarketing from "./components/ui/Digital Marketing/InfluencerMarketing";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import RedingtonGulf from "./components/ui/caseStudies/redingtongulf";
-import Qatar from "./components/ui/caseStudies/qatar";
-import Microsoft from "./components/ui/caseStudies/microsoft";
-import MicrosoftKSA from "./components/ui/caseStudies/micrpsoftKSA";
+// import RedingtonGulf from "./components/ui/caseStudies/redingtongulf";
+// import Qatar from "./components/ui/caseStudies/qatar";
+// import Microsoft from "./components/ui/caseStudies/microsoft";
+// import MicrosoftKSA from "./components/ui/caseStudies/micrpsoftKSA";
 
 function AppContent() {
   const location = useLocation();
@@ -161,7 +161,7 @@ function AppContent() {
             path="/solutions/digital-marketing/influencer-marketing"
             element={<InfluencerMarketing />}
           />
-          <Route
+          {/* <Route
             exact
             path="/solutions/casestudies/redingtongulf"
             element={<RedingtonGulf />}
@@ -180,7 +180,7 @@ function AppContent() {
             exact
             path="/solutions/casestudies/qatar"
             element={<Qatar />}
-          />
+          /> */}
           <Route path="/about" element={<About />} />
           <Route path="/journey" element={<Journey />} />
           <Route path="/contact" element={<Contact />} />
